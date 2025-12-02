@@ -5,17 +5,18 @@ public class ElectricCar extends Car {
     private int chargingTime = 4;
 
     public ElectricCar(String model, String color, int year, double mileage, boolean engineOn, String license) {
-        super(model, color, year, mileage, 0.0, engineOn, license); // fuel = 0
+        super(model, color, year, mileage, 0.0, engineOn, license); 
     }
 
     @Override
     public void refuel() {
         System.out.println("Charging the electric car's battery to 100%");
-        // batteryLevel = 100; (not used in GUI, but good to have)
+        
     }
 
     @Override
     public String toString() {
         return "Electric" + super.toString().replace("Car[", "") + ", battery=100%]";
     }
+
 }
