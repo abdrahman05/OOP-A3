@@ -15,7 +15,7 @@ public class CarGUIMain extends JFrame {
     private Mechanic mechanic = new Mechanic("John Doe");
     private Car currentCar = null;
 
-    // Constructor - builds the full GUI
+    // Constructor - the GUI
     public CarGUIMain() {
         setTitle("Car Management System - Dashboard");
         setSize(800, 600);
@@ -24,7 +24,7 @@ public class CarGUIMain extends JFrame {
         setLayout(new BorderLayout(10, 10));
         getContentPane().setBackground(new Color(240, 248, 255));
 
-        // ============ NORTH: Input Panel ============
+        // Input Panel
         JPanel inputPanel = new JPanel(new GridLayout(8, 2, 10, 10));
         inputPanel.setBorder(BorderFactory.createTitledBorder("Create New Car"));
         inputPanel.setBackground(Color.WHITE);
@@ -63,7 +63,7 @@ public class CarGUIMain extends JFrame {
 
         add(inputPanel, BorderLayout.NORTH);
 
-        // ============ CENTER: Action Buttons ============
+        // Action Buttons 
         JPanel actionPanel = new JPanel(new GridLayout(4, 2, 10, 10));
         actionPanel.setBorder(BorderFactory.createTitledBorder("Actions"));
         actionPanel.setBackground(Color.WHITE);
@@ -111,7 +111,7 @@ public class CarGUIMain extends JFrame {
 
         add(actionPanel, BorderLayout.CENTER);
 
-        // ============ SOUTH: Output Area ============
+        // Output Area 
         outputArea = new JTextArea(10, 50);
         outputArea.setEditable(false);
         outputArea.setFont(new Font("Monospaced", Font.PLAIN, 12));
@@ -181,7 +181,7 @@ public class CarGUIMain extends JFrame {
             return;
         }
         if (garage != null) {
-            if (garage.slot1 == null) {  // I added public access temporarily OR use reflection, but easier:
+            if (garage.slot1 == null) { 
                 garage.addCarToSlot1(currentCar);
             } else {
                 garage.addCarToSlot2(currentCar);
@@ -206,5 +206,6 @@ public class CarGUIMain extends JFrame {
         outputArea.append("\n");
     }
 
-    // DO NOT ADD main() HERE — LoginScreen will launch this!
+  
+
 }
