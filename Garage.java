@@ -14,15 +14,14 @@ public class Garage {
         System.out.println("Car parked in SLOT 2: " + car);
     }
 
-    public void displayCars() {
-        System.out.println("╔════════════════ GARAGE STATUS ════════════════╗");
-        System.out.println("  SLOT 1 → " + (slot1 != null ? slot1 : "EMPTY"));
-        System.out.println("  SLOT 2 → " + (slot2 != null ? slot2 : "EMPTY"));
-        System.out.println("╚════════════════════════════════════════════════╝");
+    public void displayCars(JTextArea area) {
+        area.append("  SLOT 1 → " + (slot1 != null ? slot1.toString() : "EMPTY") + "\n");
+        area.append("  SLOT 2 → " + (slot2 != null ? slot2.toString() : "EMPTY") + "\n");
     }
 
     public void removeCarFromSlot1() {
         slot1 = null;
         System.out.println("Slot 1 cleared.");
     }
+
 }
