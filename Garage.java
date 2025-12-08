@@ -19,9 +19,6 @@ public class Garage {
         area.append("  SLOT 2 → " + (slot2 != null ? slot2.toString() : "EMPTY") + "\n");
     }
 
-    public void removeCarFromSlot1() {
-        slot1 = null;
-        System.out.println("Slot 1 cleared.");
-    }
 
 }
+
