@@ -30,22 +30,36 @@ public class CarGUIMain extends JFrame {
         inputPanel.setBackground(Color.WHITE);
 
         inputPanel.add(new JLabel("Model:"));           
-        modelField = new JTextField(); inputPanel.add(modelField);
+        modelField = new JTextField(); 
+        inputPanel.add(modelField);
+        
         inputPanel.add(new JLabel("Color:"));           
-        colorField = new JTextField(); inputPanel.add(colorField);
+        colorField = new JTextField(); 
+        inputPanel.add(colorField);
+        
         inputPanel.add(new JLabel("Year:"));            
-        yearField = new JTextField("2025"); inputPanel.add(yearField);
+        yearField = new JTextField("2025"); 
+        inputPanel.add(yearField);
+        
         inputPanel.add(new JLabel("Mileage (km):"));    
-        mileageField = new JTextField("0"); inputPanel.add(mileageField);
+        mileageField = new JTextField("0"); 
+        inputPanel.add(mileageField);
+        
         inputPanel.add(new JLabel("Fuel/Battery (%):"));
-        fuelField = new JTextField("80"); inputPanel.add(fuelField);
+        fuelField = new JTextField("80"); 
+        inputPanel.add(fuelField);
+        
         inputPanel.add(new JLabel("Car Type:"));        
         carTypeCombo = new JComboBox<>(new String[]{"Normal", "Electric", "Sports"});
         inputPanel.add(carTypeCombo);
+        
         inputPanel.add(new JLabel("Trip Distance:"));   
-        distanceField = new JTextField(); inputPanel.add(distanceField);
+        distanceField = new JTextField(); 
+        inputPanel.add(distanceField);
+        
         inputPanel.add(new JLabel("Destination:"));     
-        destinationField = new JTextField(); inputPanel.add(destinationField);
+        destinationField = new JTextField(); 
+        inputPanel.add(destinationField);
 
         add(inputPanel, BorderLayout.NORTH);
 
@@ -184,3 +198,4 @@ public class CarGUIMain extends JFrame {
 
     
 }
+
